@@ -146,6 +146,7 @@ class BlockChainChecker:
 
 m = MinerProofOfWork(2)
 blockchecker = BlockChainChecker('lesson_two_blocks')
+hack_miner = MinerProofOfWork(2, 4)
 
 m.block = 'hello world'
 print(m.block)
@@ -157,14 +158,15 @@ m.block = 'hello world'
 print(m.block)
 m.block = 'goodbye world'
 print(m.block)
-m.block = 'hello kitty buul'
+m.block = 'correct transaction'
 print(m.block)
 
 print(blockchecker.check_all_blocks())
 
-hack_miner = MinerProofOfWork(2, 5)
+
 hack_miner.block = 'IM HACKER'
-hack_miner.block = 'correct transaction myau'
+hack_miner.block = 'correct transaction myao'
+hack_miner.block = 'correct transaction myao2'
 print(hack_miner.block)
 
 m.block = 'Correct transaction'
